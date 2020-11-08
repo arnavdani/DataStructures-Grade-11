@@ -1,0 +1,55 @@
+// Describes the properties of Towers class which is built
+// to solve the towers of Hanoi problem which moves a rank of objects from one "tower" to another
+// @author Arnav Dani
+// @version 9.29.20
+public class Towers
+{
+	private numDiscs;
+
+	// Constructor for Towers object
+	// @param num num of discs
+	public Towers(num)
+	{
+		numDiscs = num;
+	}
+
+	// Recursively decides which towers to move and to where
+	// completing the towers of hanoi problem
+	// @param n number of discs moved
+	// @param src the source of the discs, where they are taken from
+	// @param dest final tower for the discs
+	// @param temp the temp tower used to help move discs
+	// @return "base case! no discs to move" after all discs moved
+	public moveTower(n, src, dest, temp)
+	{
+		//reductive case
+		if(n > 0)
+		{
+			this.moveTower(n - 1, src, temp, dest);
+			this.moveDisc(src, dest);
+			this.moveTower(n - 1, temp, dest, src);
+			
+		}
+		///base case
+		else
+			return "base case! no discs to move"
+			
+	}
+
+	// @param src where disc is taken
+	// @param dest where disc is moving to
+	// @return a string that describes the movement made
+	public moveDisc(src, dest)
+	{
+	
+		return "moving 1 disc from " + src + " to " + dest;
+	}
+
+	
+	// solves the full problem by calling the recursive
+	// helper method
+	public solve()
+	{
+		this.moveTower(numDiscs, 1, 2, 3);
+	}
+}
