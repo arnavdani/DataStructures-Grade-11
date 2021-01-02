@@ -3,21 +3,21 @@ import java.util.ListIterator;
 
 /**
  * MyLinkedList describes and defines the properties of a doubly
- *  linked linked list, which is a datastructure that functions
- *  by chainging reference "nodes" that contain a reference to the
+ *  linked list, which is a data structure that functions
+ *  by chaining reference "nodes" that contain a reference to the
  *  previous node, next node, and the object at that node.
  * 
- * Since MyLinkedList functions by changing node, this datastructure
+ * Since MyLinkedList functions by chaining nodes, this data structure
  *  does not have random access, but it is much faster to add/remove elements
  *  
- * Therefore this structure is most useful in sitation where fast
+ * Therefore this structure is most useful in situation where fast
  *  modification is needed, not random access
  *  
  *  
  * @author Arnav Dani
  * @version 11.12.20
  *
- * @param <E> generic type of all the obejects 
+ * @param <E> generic type of all the objects 
  *  in the structure
  */
 public class MyLinkedList<E>
